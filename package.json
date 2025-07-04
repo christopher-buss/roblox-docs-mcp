@@ -1,0 +1,55 @@
+{
+	"name": "roblox-docs-mcp",
+	"version": "0.0.1",
+	"description": "Minimal MCP server for intelligent Roblox documentation search with RAG",
+	"keywords": [
+		"mcp",
+		"roblox",
+		"documentation",
+		"rag",
+		"semantic-search",
+		"typescript"
+	],
+	"homepage": "https://github.com/christopher-buss/roblox-docs-mcp#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/christopher-buss/roblox-docs-mcp.git"
+	},
+	"license": "MIT",
+	"author": "christopher-buss",
+	"type": "module",
+	"main": "dist/index.js",
+	"bin": {
+		"roblox-docs-mcp": "dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf dist",
+		"dev": "ts-node --esm src/index.ts",
+		"rebuild": "npm run clean && npm run build",
+		"start": "node dist/index.js"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "1.15.0",
+		"chromadb": "3.0.6",
+		"dotenv": "17.0.1",
+		"markdown-it": "14.1.0",
+		"openai": "5.8.2",
+		"simple-git": "3.28.0",
+		"typescript": "^5.8.3",
+		"yaml": "^2.3.4",
+		"zod": "3.25.71"
+	},
+	"devDependencies": {
+		"@types/markdown-it": "14.1.2",
+		"@types/node": "24.0.10",
+		"ts-node": "10.9.2"
+	},
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"packageManager": "pnpm@10.12.4"
+}
